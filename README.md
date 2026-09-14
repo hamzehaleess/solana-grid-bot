@@ -9,6 +9,31 @@ wallet. Live mode places real resting orders through Jupiter's Trigger API —
 funds move into a Jupiter-managed vault the moment an order is placed, not
 only once it fills.
 
+## Disclaimer
+
+**This is experimental, unaudited software that can place real orders with
+real money. Use it entirely at your own risk.**
+
+- Not financial advice. Grid trading does not guarantee profit — it can
+  lose money, including your full deposited balance, especially if price
+  trends straight through the configured range instead of oscillating
+  inside it.
+- Provided "as is", with no warranty of any kind. There is no guarantee
+  this code is free of bugs, including bugs that could cause unintended
+  trades, stuck orders, or fund loss.
+- Large parts of this codebase are a reconstruction after the original
+  project was accidentally deleted (see "Origin" below) — some files are
+  verbatim recoveries, others are faithful reimplementations that have
+  **not** been exercised in live trading as extensively as the original.
+  Read a file's own header comment before trusting it with real funds.
+- You are solely responsible for any funds you configure this bot to
+  trade, for the wallet key you provide it, and for verifying its behavior
+  (start in paper mode, and with a small budget in live mode) before
+  trusting it further.
+- The author(s) and any contributors accept no liability for financial
+  losses, security incidents, or other damages arising from the use of
+  this software.
+
 ## Origin
 
 This rebuilds the grid module of an earlier project (`solana-scalpe-bot-alpha`)
